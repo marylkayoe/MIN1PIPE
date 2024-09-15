@@ -40,6 +40,7 @@ function [se, spatialr] = auto_detect_params(a)
     sizet = min(size(a));
     if sf > 6
         se = 5;
+        %se = 20; % yoe testing
         if sizet > 200
             spatialr = max(0.1, 5 / sf);
         else

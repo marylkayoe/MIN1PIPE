@@ -44,7 +44,7 @@ function [file_name_to_save, filename_raw, filename_reg] = min1pipe(Fsi, Fsi_new
     Params.Fsi = Fsi;                                                   %%%
     Params.Fsi_new = Fsi_new;                                           %%%
     Params.spatialr = spatialr;                                         %%%
-    Params.neuron_size = se; %%% half neuron size; 9 for Inscopix and 5 %%%
+    Params.neuron_size = 9; %%% half neuron size; 9 for Inscopix and 5 %%%
                             %%% for UCLA, with 0.5 spatialr separately  %%%
                                                                         %%%
     %%% fixed parameters (change not recommanded) %%%                   %%%
@@ -262,6 +262,7 @@ function min1pipe_init
         onPath = any(strcmp(pathtop1(1: end - 1), pathCell));
     end
     
+    if 0
     %%% set path and setup cvx if not on path %%%
     cvx_dir = [pathtop1, 'utilities'];
     pathcvx = [cvx_dir, filesep, 'cvx', filesep, 'cvx_setup.m'];
@@ -282,6 +283,7 @@ function min1pipe_init
     end
     if ~exist(fullfile(fileparts(prefdir), 'cvx_prefs.mat'), 'file')
         run(pathcvx);
+    end
     end
 end
 

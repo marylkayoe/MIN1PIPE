@@ -46,7 +46,7 @@ function real_neuron_select
         figure(1)
         clf
         pause(0.1)
-        suptitle(['Section #', num2str(i), '/', num2str(nc)])
+        title(['Section #', num2str(i), '/', num2str(nc)])
 %         set(gcf, 'units', 'normalized', 'outerposition', [0 0 0.5 1])
 
         %%% draw roi selection pool %%%
