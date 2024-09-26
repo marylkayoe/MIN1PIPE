@@ -27,7 +27,7 @@ function R = runMin1Pipe(FRAMERATE)
     %% Session-Specific Parameter Initialization %%
     Fsi = FRAMERATE;             % Original sampling rate (Hz)
     Fsi_new = FRAMERATE;         % New sampling rate after temporal downsampling (Hz)
-    spatialr = 1;              % Spatial downsampling factor (1 means no downsampling)
+    spatialr = 0.5;              % Spatial downsampling factor (1 means no downsampling)
     se = 9;                      % Structure element size for background removal
     ismc = 0;                    % Motion correction flag (1 for applying motion correction, 0 otherwise)
     flag = 2;                    % Seed selection method (1 for automatic, 2 for manual)
